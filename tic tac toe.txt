@@ -1,0 +1,28 @@
+designing a board as a list
+selecting the player
+
+player 1 (x or o)
+player 2 (x or o)
+        
+loop:
+
+    refresh the board
+    display the existing state of the board after each update
+
+    player1 move:
+        can move only to free positions
+        check for strikes using a for loop:
+            horizontally / vertically / diagonally
+            if strike:
+                print winner
+                exit the game
+            else:
+                move to next player
+    player 2 move:
+        // same as player 1
+
+    check win / tie
+        win:
+            if a strike is found
+        tie:
+            if all slots are filled
