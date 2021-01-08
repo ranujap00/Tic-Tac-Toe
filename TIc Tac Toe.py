@@ -14,18 +14,18 @@ def display_board():
 def check_strike():
     # check horizontally
     for i in range(0, len(cell), 3):
-        if cell[i] == cell[i+1] == cell[i+2] == ("o" or "x"):
+        if cell[i] == cell[i+1] == cell[i+2] == "x" or cell[i] == cell[i+1] == cell[i+2] == "o":
             return True
 
     # check vertically
     for i in range(0, 3):
-        if cell[i] == cell[i+3] == cell[i+6] == ("o" or "x"):
+        if cell[i] == cell[i+3] == cell[i+6] == "x" or cell[i] == cell[i+3] == cell[i+6] == "o":
             return True
 
     # check diagonally
-    if cell[0] == cell[4] == cell[8] == ("o" or "x"):
+    if cell[0] == cell[4] == cell[8] == "x" or cell[0] == cell[4] == cell[8] == "o":
         return True
-    elif cell[2] == cell[4] == cell[6] == ("o" or "x"):
+    elif cell[2] == cell[4] == cell[6] == "x" or cell[2] == cell[4] == cell[6] == "o":
         return True
     else:
         return False
